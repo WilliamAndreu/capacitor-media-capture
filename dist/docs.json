@@ -1,0 +1,310 @@
+{
+  "api": {
+    "name": "MediaCapturePlugin",
+    "slug": "mediacaptureplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "captureAudio",
+        "signature": "(options?: CaptureAudioOptions | undefined) => Promise<MediaFileResult>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "- Options for audio capture",
+            "type": "CaptureAudioOptions | undefined"
+          }
+        ],
+        "returns": "Promise<MediaFileResult>",
+        "tags": [
+          {
+            "name": "param",
+            "text": "options - Options for audio capture"
+          },
+          {
+            "name": "returns",
+            "text": "Promise with array of captured media files"
+          }
+        ],
+        "docs": "Launch audio recorder application for recording audio clip(s).",
+        "complexTypes": [
+          "MediaFileResult",
+          "CaptureAudioOptions"
+        ],
+        "slug": "captureaudio"
+      },
+      {
+        "name": "captureImage",
+        "signature": "(options?: CaptureImageOptions | undefined) => Promise<MediaFileResult>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "- Options for image capture",
+            "type": "CaptureImageOptions | undefined"
+          }
+        ],
+        "returns": "Promise<MediaFileResult>",
+        "tags": [
+          {
+            "name": "param",
+            "text": "options - Options for image capture"
+          },
+          {
+            "name": "returns",
+            "text": "Promise with array of captured media files"
+          }
+        ],
+        "docs": "Launch camera application for taking image(s).",
+        "complexTypes": [
+          "MediaFileResult",
+          "CaptureImageOptions"
+        ],
+        "slug": "captureimage"
+      },
+      {
+        "name": "captureVideo",
+        "signature": "(options?: CaptureVideoOptions | undefined) => Promise<MediaFileResult>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "- Options for video capture",
+            "type": "CaptureVideoOptions | undefined"
+          }
+        ],
+        "returns": "Promise<MediaFileResult>",
+        "tags": [
+          {
+            "name": "param",
+            "text": "options - Options for video capture"
+          },
+          {
+            "name": "returns",
+            "text": "Promise with array of captured media files"
+          }
+        ],
+        "docs": "Launch device camera application for recording video(s).",
+        "complexTypes": [
+          "MediaFileResult",
+          "CaptureVideoOptions"
+        ],
+        "slug": "capturevideo"
+      },
+      {
+        "name": "getFormatData",
+        "signature": "(mediaFile: MediaFile) => Promise<MediaFileData>",
+        "parameters": [
+          {
+            "name": "mediaFile",
+            "docs": "- The media file to get format data for",
+            "type": "MediaFile"
+          }
+        ],
+        "returns": "Promise<MediaFileData>",
+        "tags": [
+          {
+            "name": "param",
+            "text": "mediaFile - The media file to get format data for"
+          },
+          {
+            "name": "returns",
+            "text": "Promise with media file format data"
+          }
+        ],
+        "docs": "Get format data for a media file.",
+        "complexTypes": [
+          "MediaFileData",
+          "MediaFile"
+        ],
+        "slug": "getformatdata"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "MediaFileResult",
+      "slug": "mediafileresult",
+      "docs": "Result returned from capture methods",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "files",
+          "tags": [],
+          "docs": "Array of captured media files",
+          "complexTypes": [
+            "MediaFile"
+          ],
+          "type": "MediaFile[]"
+        }
+      ]
+    },
+    {
+      "name": "MediaFile",
+      "slug": "mediafile",
+      "docs": "Encapsulates properties of a media capture file",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "name",
+          "tags": [],
+          "docs": "The name of the file, without path information",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "fullPath",
+          "tags": [],
+          "docs": "The full path of the file, including the name",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "type",
+          "tags": [],
+          "docs": "The MIME type of the file",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "lastModifiedDate",
+          "tags": [],
+          "docs": "The date and time that the file was last modified",
+          "complexTypes": [],
+          "type": "number"
+        },
+        {
+          "name": "size",
+          "tags": [],
+          "docs": "The size of the file, in bytes",
+          "complexTypes": [],
+          "type": "number"
+        }
+      ]
+    },
+    {
+      "name": "CaptureAudioOptions",
+      "slug": "captureaudiooptions",
+      "docs": "Options for capturing audio",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "limit",
+          "tags": [],
+          "docs": "Maximum number of audio clips to capture. Default is 1.\nOn iOS, only 1 is supported.",
+          "complexTypes": [],
+          "type": "number | undefined"
+        },
+        {
+          "name": "duration",
+          "tags": [],
+          "docs": "Maximum duration of an audio clip in seconds.",
+          "complexTypes": [],
+          "type": "number | undefined"
+        }
+      ]
+    },
+    {
+      "name": "CaptureImageOptions",
+      "slug": "captureimageoptions",
+      "docs": "Options for capturing images",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "limit",
+          "tags": [],
+          "docs": "Maximum number of images to capture. Default is 1.",
+          "complexTypes": [],
+          "type": "number | undefined"
+        },
+        {
+          "name": "quality",
+          "tags": [],
+          "docs": "The quality of saved image in range [0-100]. Default is 100.\nAndroid only.",
+          "complexTypes": [],
+          "type": "number | undefined"
+        }
+      ]
+    },
+    {
+      "name": "CaptureVideoOptions",
+      "slug": "capturevideooptions",
+      "docs": "Options for capturing video",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "limit",
+          "tags": [],
+          "docs": "Maximum number of video clips to capture. Default is 1.\nOn iOS, only 1 is supported.",
+          "complexTypes": [],
+          "type": "number | undefined"
+        },
+        {
+          "name": "duration",
+          "tags": [],
+          "docs": "Maximum duration of a video clip in seconds.",
+          "complexTypes": [],
+          "type": "number | undefined"
+        },
+        {
+          "name": "quality",
+          "tags": [],
+          "docs": "The quality of saved video. 0 = low, 1 = high. Default is 1.\niOS only.",
+          "complexTypes": [],
+          "type": "number | undefined"
+        }
+      ]
+    },
+    {
+      "name": "MediaFileData",
+      "slug": "mediafiledata",
+      "docs": "Encapsulates format information about a media file",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "codecs",
+          "tags": [],
+          "docs": "The actual format of the audio and video content",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "bitrate",
+          "tags": [],
+          "docs": "The average bitrate of the content. The value is zero for images.",
+          "complexTypes": [],
+          "type": "number | undefined"
+        },
+        {
+          "name": "height",
+          "tags": [],
+          "docs": "The height of the image or video in pixels. The value is zero for audio clips.",
+          "complexTypes": [],
+          "type": "number | undefined"
+        },
+        {
+          "name": "width",
+          "tags": [],
+          "docs": "The width of the image or video in pixels. The value is zero for audio clips.",
+          "complexTypes": [],
+          "type": "number | undefined"
+        },
+        {
+          "name": "duration",
+          "tags": [],
+          "docs": "The length of the video or sound clip in seconds. The value is zero for images.",
+          "complexTypes": [],
+          "type": "number | undefined"
+        }
+      ]
+    }
+  ],
+  "enums": [],
+  "typeAliases": [],
+  "pluginConfigs": []
+}

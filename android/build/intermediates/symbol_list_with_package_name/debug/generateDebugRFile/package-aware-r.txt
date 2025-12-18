@@ -1,0 +1,2 @@
+com.capacitor.mediacapture
+xml mediacapture_provider_paths
