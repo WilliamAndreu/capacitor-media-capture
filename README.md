@@ -3,9 +3,9 @@
 > A powerful, modern Capacitor plugin for capturing **audio**, **video**, and **images** on iOS and Android.
 
 [![npm version](https://img.shields.io/npm/v/capacitor-media-capture.svg)](https://www.npmjs.com/package/capacitor-media-capture)
-[![License](https://img.shields.io/npm/l/capacitor-media-capture.svg)](https://github.com/WilliamAndreu/capacitor-media-capture/blob/main/LICENSE)
+[![License](https://img.shields.io/npm/l/capacitor-media-capture.svg)](https://github.com/WilliamAndreu/capacitor-media-capture/blob/master/LICENSE)
 
-Built for **Capacitor 6+** with full TypeScript support and a modern Promise-based API. Compatible with the Cordova Media Capture plugin API for easy migration.
+Built for **Capacitor 6 & 7** with full TypeScript support and a modern Promise-based API. Compatible with the Cordova Media Capture plugin API for easy migration.
 
 ---
 

@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0] - 2025-12-18
+
+### Added
+- **Capacitor 7 Support**: Full compatibility with Capacitor 7.x
+- Peer dependency now supports both Capacitor 6 and 7: `^6.0.0 || ^7.0.0`
+
+### Changed
+- Updated development dependencies to Capacitor 7.x
+- Updated README to reflect Capacitor 6 & 7 support
+- Fixed license badge in README to use correct branch (master instead of main)
+
+### Technical Details
+- No breaking changes - plugin API remains fully compatible
+- All TypeScript types unchanged
+- Native Android and iOS code unchanged (compatible with both versions)
+- Tested and verified with Capacitor 7.4.2
+
 ## [1.0.0] - 2025-12-15
 
 ### Added
